@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspadinha</title>
+    <style>
+        .scratch {
+            width: 300px;
+            height: 100px;
+            background-color: #d3d3d3; /* Cinza claro */
+            position: relative;
+            overflow: hidden;
+        }
+        .scratch .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff69b4; /* Rosa forte */
+            z-index: 1;
+        }
+        .scratch .message {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red; /* Vermelho */
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="scratch">
+        <div class="cover"></div>
+        <div class="message">Surpresa! Vamos jantar fora sexta à noite e ir ao cinema!</div>
+    </div>
+
+    <script>
+        document.querySelector('.cover').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
